@@ -1,0 +1,16 @@
+1|Produits|1
+2|Accessoires|1
+3|Bijoux|1
+4|Peluches|1
+5|Vêtements|1
+6|Autres|1
+7|Coques|2
+8|Festivités|2
+9|Porte-clés|2
+10|Bagues|3
+11|Colliers|3
+12|Montres|3
+13|Combinaisons|5
+14|T-shirts|5
+15|Figurines|6
+16|Posters|6

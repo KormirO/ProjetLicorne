@@ -1,0 +1,445 @@
+#home {
+  width: 95%;
+  margin: 0 auto;
+  background: aliceblue url(../design/background_v4.png);
+  color : black;
+}
+
+/*
+/////////////////////////////
+Code CSS spécifique au header
+/////////////////////////////
+*/
+
+#header {
+  width: 100%;
+  display: flex;
+  position : sticky;
+  top: 0;
+  background-color: plum;
+}
+
+#logo-img, #logo-link {
+  width: 120px;
+  height: 120px;
+}
+
+#navigation {
+  width: 100%;
+}
+
+/* Code CSS relatif à la barre de recherche */
+#searchbar-cart {
+  display: flex;
+  flex-direction: row;
+}
+
+#search {
+  width: calc(100% - 80px);
+  min-width: 160px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+#search-elements {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+}
+
+#search-input {
+  background-color: #F2F2F2;
+  color: #5F5F5F;
+  width: calc(100% - 70px);
+  min-width: 120px;
+  height: 40px;
+  border: 0;
+  padding : 0 0 0 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+#search-input:hover, #search-input:focus {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75);
+  outline: none;
+}
+
+#search-submit::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin: -10px;
+  width: 20px;
+  height: 20px;
+  background: url(../design/SearchIcon.png) center / contain no-repeat;
+}
+
+#search-submit {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: mediumorchid;
+  border: 0;
+  cursor: pointer;
+}
+
+#search-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#cart-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+#cart-button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin: -20px;
+  width: 40px;
+  height: 40px;
+  background : url(../design/cartIcon.png) center / contain no-repeat;
+}
+
+#cart-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: darkorchid;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Code CSS relatif à l'affichage des catégories */
+#categories {
+  background-color: mediumorchid;
+  height: 50px;
+  margin-top: 5px;
+}
+
+#categories a {
+  display: flex;
+  text-decoration: none;
+}
+
+#categories-menu {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+}
+
+#categories-menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.categories-menu-item {
+  position: relative;
+  list-style-type: none;
+}
+
+.categories-menu-item > a {
+  padding: 15px 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: Impact, sans-serif;
+  font-size: 1.1em;
+}
+
+.categories-submenu {
+  display: none;
+}
+
+#categories .categories-menu-item:hover .categories-submenu{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  padding: 0;
+}
+
+.categories-submenu-item {
+  list-style-type: none;
+  background: transparent;
+  padding-bottom: 3px;
+}
+
+.categories-submenu-item > a {
+  width: 100%;
+  padding: 2px 10px;
+  color: #000;
+  font-size: 1.1em;
+  background-color: orchid;
+  transition: 0.2s;
+}
+
+.categories-submenu-item a:hover {
+  background-color: mediumorchid;
+}
+
+/*
+/////////////////////////////
+Code CSS spécifique au footer
+/////////////////////////////
+*/
+
+#footer {
+  background-color: plum;
+}
+
+#footer > p {
+  padding-bottom: 10px;
+  margin: 0 0 0 10px;
+  font-size: 1.1em;
+}
+
+/*
+///////////////////////////////////////////////////////////
+Code CSS commun à des éléments de la vue "accueil.view.php"
+                          et de la vue "categorie.view.php"
+                          et de la vue "recherche.view.php"
+=> Affichage des produits
+///////////////////////////////////////////////////////////
+*/
+
+#products {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.products-item {
+  width: 350px;
+  height: 350px;
+  margin: 30px 5px;
+  background: mediumorchid url(../design/background_v4.png);
+}
+
+.products-item > a, .products-item > a > img {
+  display: block;
+  width: 260px;
+  height: 260px;
+  margin: 10px auto 10px auto;
+}
+
+.products-item-name, .products-item-price {
+  text-align: center;
+  margin: 10px 0 0 0;
+  font : 1.4em Impact, sans-serif;
+  font-weight: 100;
+}
+
+.products-item-name > a {
+  text-decoration: none;
+  color: black;
+  transition: 0.25s;
+}
+
+.products-item-name > a:hover {
+  color : darkorchid;
+}
+
+.products-item-name + a:hover {
+  box-shadow: 0 0 8em mediumorchid;
+  transition: 0.5s;
+}
+
+/*
+/////////////////////////////////////////////
+Code CSS commun à la vue "categorie.view.php"
+               et la vue "recherche.view.php"
+=> Affichage des numéros de page
+/////////////////////////////////////////////
+*/
+
+#pages-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0 40px 0;
+}
+
+.pages-list-item {
+  list-style-type: none;
+}
+
+.pages-arrows-enabled, .pages-other_pages, #pages-current_page {
+  text-decoration: none;
+  padding: 0 10px;
+  color: black;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 1.75em;
+}
+
+#pages-current_page {
+  text-decoration: underline;
+}
+
+.pages-arrows-enabled:hover, .pages-other_pages:hover {
+  color: darkorchid;
+}
+
+.pages-arrows-disabled {
+  display: none;
+}
+
+/*
+/////////////////////////////////////////////////
+Code CSS spécifique à la vue "recherche.view.php"
+                    et à la vue "panier.view.php"
+/////////////////////////////////////////////////
+*/
+
+#search-error, #cart-empty {
+  text-align: center;
+  font-size: 3em;
+  font-family: Impact, sans-serif;
+}
+
+/*
+///////////////////////////////////////////////
+Code CSS spécifique à la vue "accueil.view.php"
+///////////////////////////////////////////////
+*/
+
+#title {
+  font: 4em Impact, sans-serif;
+  color: darkorchid;
+  padding: 70px 0;
+  margin: 20px 0 0 0;
+  text-align: center;
+  background: orchid url(../design/background.png);
+}
+
+#best_sellers-title {
+  text-align: center;
+  margin: 50px 0 0 0;
+  font: 2em Impact, sans-serif;
+  color: orchid;
+  text-decoration: underline;
+}
+
+/*
+///////////////////////////////////////
+Code CSS spécifique aux titres des vues
+///////////////////////////////////////
+*/
+
+#title-category, #title-product, #title-search, #title-cart {
+  font: 3em Impact, sans-serif;
+  color: darkorchid;
+  padding: 20px 0;
+  margin: 20px 0;
+  text-align: center;
+  background: mediumorchid url(../design/background_v3.png);
+}
+
+/*
+///////////////////////////////////////////////
+Code CSS spécifique à la vue "produit.view.php"
+///////////////////////////////////////////////
+*/
+
+#product {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+#product > div {
+  max-width: 40%;
+  max-height: 40%;
+  margin: 0 10px;
+}
+
+#product-image > img {
+  width: 500px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#product-details-name {
+  margin: 15px 0;
+  font-size: 1.75em;
+  color: darkorchid;
+  text-decoration: underline;
+}
+
+#product-details-price {
+  margin: 0;
+  font-size: 1.5em;
+  color: mediumorchid;
+}
+
+#product-add_cart {
+  margin-top: 30px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  background-color: plum;
+  border: 1px solid plum;
+  transition: 0.3s;
+}
+
+#product-add_cart:hover {
+  transform: scale(1.04);
+  background-color: orchid;
+}
+
+#product-add_cart:focus {
+  outline: none;
+}
+
+#product-add_cart-text {
+  font-size: 150%;
+  font-weight: 600;
+}
+
+#product-details-description {
+  margin-top: 40px;
+}
+
+/*
+//////////////////////////////////////////////
+Code CSS spécifique à la vue "panier.view.php"
+//////////////////////////////////////////////
+*/
+
+#cart-table {
+  width: 100%;
+  margin: 20px 0;
+  border : 5px solid darkorchid;
+}
+
+#cart-table-header > tr > th {
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: Impact, sans-serif;
+  border: 3px solid mediumorchid;
+}
+
+#cart-table-body > tr {
+  text-align: center;
+}
+
+#cart-table-body > tr > td {
+  padding: 5px 0;
+  border: 1.5px solid mediumorchid;
+}
+
+.cart-total-text {
+  font-family: Impact, sans-serif;
+  font-size: 1.25em;
+}
