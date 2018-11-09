@@ -1,0 +1,12 @@
+# ProjetLicorne
+Projet PHP (AchèteUneLicorne) - ALEXANDRE Clément, BARRA Rémi, VALENTIN Adam
+
+45651804_983754055160945_113129769289121792_n.jpg = Maquette page d'accueil
+
+45717885_353327028747645_1568179953764139008_n.jpg & https://github.com/KormirO/ProjetLicorne/blob/master/45854677_331048221044509_7110798681900580864_n.jpg = Concept de la première séance
+
+45733055_2220393664862854_7803111504089186304_n.jpg = Maquette page produit
+
+45808160_2074988442595256_8583262124082462720_n.jpg = MCD Basique
+
+45816376_725447854521292_6610285054608277504_n.jpg = Maquette gestion panier
